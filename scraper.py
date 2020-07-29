@@ -3,9 +3,8 @@
 # Will take a list of autotrader ad page IDs and scrape useful data from them,
 # outputting in .csv format. The scraper function itself can be found in ff1.py
 
-# Takes three arugments, in order:
-# 1. an input file name (one line per ad url)
-# 2. an output file name (appends by default)
+# To use it in cmd, here is one example:
+# python scraper.py url_list.txt output.csv
 
 
 import sys
@@ -45,6 +44,6 @@ with open(str(sys.argv[2]), mode, encoding = 'gb18030', newline='') as o_file:
         cwriter.writerow(tmp)
         i+=1
         if i % 10 == 0:
-            print(i)
+            print(i, "entries are logged")
 
 print('done')
